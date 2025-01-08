@@ -1,0 +1,67 @@
+Operators:
+Assignment:
+Var student= “hari”
++=
+-=
+/=
+%=
+Logical operators:
+And--&&
+T and T = T
+Or--||
+T or F = F
+Not --- !
+Relational (comparision op):
+<,>, >=,<=,==,!=,===,!==
+Conditional operator: Ternary operator(?)
+First evaluates  an expression for true or false
+Syntax: condition ? e1:e2
+Window methods:
+Alert():
+Prompt(): to take input from the user
+Confirm():
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+            
+        //let b= 3.5
+        //let a='3.5'
+        //console.log("hi + a+b")
+        //console.log(`hi +${a+b}`)
+        //document.write(`hi +${a+b}`,"<br>")
+        //document.write("hi + a+b")
+        //let a="hari"
+        //let b=" vardhan"
+        //let age=18
+        //let greeting =`i am ${a+b} my age is ${age}`
+        //console.log(greeting)
+        let a= 10 
+        let b=5
+        b-=30
+        document.write(b,"<br>")
+        a+=30
+        document.write(a,"<br>")
+        document.write(a>b,"<br>")
+        let c= 10
+        let d= 10
+        document.write(c!=d,"<br>")
+        document.write(c==d,"<br>")
+        let t= 30
+        let r= (t>30) ? "ac-off":"ac -on"
+        document.write(r)
+        let name = prompt("enter the name:")
+        alert(name)
+        let aa=prompt()
+        let bb=prompt()
+        document.write(typeof(aa))
+        document.write(aa+bb)
+    </script>
+</body>
+</html>
