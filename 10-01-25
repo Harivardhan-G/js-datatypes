@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        /*let a=parseInt(prompt("enter number: "))
+        if(a%2==0 && a%3==0){
+            document.write("divible by 2 and 3")
+
+        }else{
+            document.write("not divisible  ")
+        }
+          */
+
+
+        /*let a=parseInt(prompt("enter num1:"))  
+        let b=parseInt(prompt("enter num2: "))
+        let c=parseInt(prompt("enter num3: "))
+        if(a>b && a>c){
+            document.write(a+" is largest number")
+        }else if(b>a && b>c){
+            document.write(b+" is largest number")
+        }else{
+            document.write(c+"is largest number")
+          }
+            */
+
+        /*let a=parseInt(prompt("enter workdays:"))
+        let b=parseInt(prompt("enter absent days: "))
+        let c=parseInt(prompt("enter present days: "))
+        let d=(c/a)*100
+        if(d>75){
+            document.write("eligible for exam")
+        }else{
+            document.write(" not eligible")
+        }*/
+
+        /*let a=parseInt(prompt("enter service period: "))
+        let b=parseInt(prompt("enter salary: "))
+        if(a>10){
+            document.write(((b*10)/100+b)+ " is the bonus and salary")
+        }else if(a>=6 && a<=10){
+            document.write(((b*8)/100+b)+" is the bonus")
+        }else if(a<6){
+            document.write(((b*5)/100+b)+" is th bomus")
+        }*/
+        
+    </script>
+</body>
+</html>
