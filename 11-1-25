@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        /*let num=prompt("enter a number?")
+        switch(true){
+            case num>0:
+                document.write("number is positive")
+                break;
+            case num==0:
+                document.write("number is zero")
+                break;
+            case num<0:
+                document.write("number is negative")
+                break;
+            default:
+                document.write("invalid Input")
+        }*/
+        
+       /* let day=prompt("enter a day?")
+        switch(day){
+            case day="monday":
+                document.write("weekday")
+                break;
+            case day="tuesday":
+                document.write("weekday")
+                break;
+            case day="wednesday":
+                document.write("weekday")
+                break;
+            case day="thursday":
+                document.write("weekday")
+                break;
+            case day="friday":
+                document.write("weekend")
+                break;
+            case day="saturday":
+                document.write("weekend")
+                break;
+            case day="sunday":
+                document.write("weekend")
+                break;
+            default:
+                document.write("invalid Input") 
+            }*/
+
+            /*let a=prompt("Enter number of units")
+        if (a>0 && a<=50){
+            let b=a*2
+            let c=b*0.2
+            let d=b+c
+            document.write(d)
+        }
+        else if (a>50 && a<=150){
+            let b=50*2+(a-50)*3
+            let c=b*0.2
+            let d=b+c
+            document.write(d)
+        }
+        else if (a>151 && a<=250){
+            let b=(50*2)+(100*3)+(a-150)*5
+            let c=b*0.2
+            let d=b+c
+            document.write(d)
+        }
+        else if (a>250){
+            let b=(50*2)+(100*3)+(100*5)+(a-250)*8
+            let c=b*0.2
+            let d=b+c
+            document.write(d)
+        }
+        else{
+            document.write("Enter positive units")
+        }
+        */
+    
+    </script>
+</body>
+</html>
