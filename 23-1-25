@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+       /* function greet(){
+            document.write("hello","<br>")
+        }
+        greet()
+        document.write("hiii","<br>")
+        greet()
+        document.write("gm","<br>")
+        greet()*/
+
+        //function with parameter
+        /*function g(name){
+            document.write("hiii " +name)
+        }
+        let name=prompt("enter your name")
+        g(name)*/
+
+        //addition using functions
+        /*function add(a,b){
+            document.write(a+b,"<br>")
+        }
+        add(3,5)
+        add(7,3)*/
+ 
+        //function return
+        /*function a(aa,bb){
+            return aa+bb;
+        }
+        let n1=parseFloat(prompt("enter a number1 "))
+        let n2=parseFloat(prompt("enter a number2 "))
+          ///calling function
+        let result = a(n1,n2)
+        document.write("the result is:" +result)
+        */
+
+        //anonymous function
+        /*sum= function(n1,n2){
+            let r= n1+n2
+            return r
+        }
+        document.write(sum(8,9))*/
+
+        
+        
+    </script>
+</body>
+</html>
