@@ -1,0 +1,72 @@
+//Arrow function wiyhout parameter
+        let c=()=>{
+            document.write("hii","<br>")
+        }
+        c()
+
+        //Arrow function with parameter
+        let x=(x,y)=>{
+            document.write(x+y,"<br>")
+        }
+        x(20,30)
+        x(10,50)
+        
+        /*
+        //Arrow function with one argument 
+        ////without using paranthesis
+        let greet=x=>document.write(x)
+        greet("hello")
+        */
+
+        /*
+        //Arrow function with out argument
+        let greet =( )=>document.write("hihi")
+        greet() 
+        */
+
+        /*
+        //arrow function as an expression 
+        let age = 18;
+        let welcome =(age<18) ?
+        ( )=>document.write("hi chaith"):
+        ( )=>document.write("helooo");
+        welcome(age)
+        */
+
+        /*
+        //synchronous
+        function task1(){
+            document.write("task1 : start","<br>")
+        }
+        function task2(){
+            document.write("task2 : start","<br>")
+        }
+        function task3(){
+            document.write("task3 : start","<br>")
+        }
+        task1()
+        task2()
+        task3()
+        */
+
+
+        /*
+        //asynchronous
+        document.write("hii ravi");
+        setTimeout(() =>{
+            document.write("i am in lab")
+        },5000);
+        document.write("i will come later")
+        */
+
+        //callbacks
+        function greet(name,callback){
+            document.write(`hello, ${name}!`
+            callback();
+            ////this calls the callback function after greeting
+        }
+        function saygoodbye(){
+            document.write("goodbye")
+        }
+        /////call greet and pass saygoodbye as the callback
+        greet("sam" ,saygoodbye)
