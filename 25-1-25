@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+         
+        // Callbacks
+         function greet(name, callback) {
+        document.write(`hello, ${name}!<br>`); 
+        callback(); 
+        }
+        function sayGoodbye() {
+        document.write("goodbye","<br>"); // Writes "goodbye"
+        }
+        // Call greet and pass sayGoodbye as the callback
+        greet("Sam", sayGoodbye,"<br>");
+        
+
+
+
+        function mainFunction(callback){
+            document.write("executing main function","<br>")
+            callback()
+        }
+        function callbackFunction(){
+            document.write("callback function executed","<br>")
+        }
+        mainFunction(callbackFunction)
+
+
+
+
+        function greet(name ,callback){
+            document.write("hello"+name,"<br>");
+            callback();
+        }
+        function goodbye(){
+            document.write("goodbye","<br>")
+        }
+        greet("hari" ,goodbye,"<br>")
+
+
+        
+        function greet(name, callback) {
+            document.write("hello " + name + "<br>");
+            callback(); // Calls the callback function after the greeting
+        }
+        
+        // Call greet and pass an anonymous function as the callback
+        greet("venkat", function() {
+            document.write("a developer<br>"); // Anonymous function to write "goodbye"
+        });
+
+
+        //Asynchronous callback with setTimeout;
+        function fetchData(callback){
+            document.write("fetching data","<br>")
+        }
+        setTimeout(function(){
+            document.write("data fetched","<br>");
+            callback();
+        },2000);
+        function processData(){
+            document.write("processing the fetched data")
+        }
+        fetchData(processData);
+
+        
+    </script>
+
+</body>
+</html>
