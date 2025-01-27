@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        /*
+        let mypromise= new Promise((resolve , reject)=>{
+            let success = true
+            if(success){
+                resolve("the operation was sussessful","<br>")
+            }else{
+                reject("the operation failed")
+            }
+        });
+        mypromise
+        .then(result=>{
+            document.write(result,"<br>")
+        })
+        .catch(error=>{
+            document.write(error)
+        })
+        */
+
+
+        /*
+        //chaining promises
+        let promise= new Promise((resolve , reject)=>{
+            resolve(5);
+        })
+        promise
+        .then(result=>{
+            document.write(result,"<br>")
+            return result*2
+        })
+        .then(result=>{
+            document.write(result,"<br>");
+            return result+3;
+        })
+        .then(result=>{
+            document.write(result,"<br>")
+        })
+        .catch(error=>{
+            document.write("error" ,error)
+        })
+        */
+
+
+        /*
+        //promise with setTimeOut
+        //ex1:
+        let delayedPromise = new Promise((resolve, reject) => {
+            setTimeout(() => {
+                resolve("Promise resolved after 2 seconds");
+            }, 2000); 
+        });
+        
+        delayedPromise
+            .then(result => {
+               document.write(result); 
+            })
+            .catch(error => {
+                document.write("Error:", error);
+            });
+        */
+        
+
+            //ex2:
+            let fetchData=new Promise((resolve, reject)=>{
+                let datafetched=false
+                setTimeOut(()=>{
+                    if(datafetched){
+                        resolve("data fetched successfully")
+                    }else{
+                        reject("failed to fetch")
+                    }
+                },2000)
+            })
+            fetchData
+            .then(result=>{
+                document.write(result,"<br>")
+            })
+            .catch(error=>{
+                document.write(error)
+            })
+    </script>
+</body>
+</html>
