@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <!--  
+    <h1 id="a">i am sai</h1>
+    <h1 id="b">i am sam</h1>
+    <h1 id="c">i am ravi</h1>
+    <script>
+        let y=document.getElementsById('a')
+        document.write(y)
+    </script>
+-->
+    <!--  
+    <h1 class="a">i am sri</h1>
+    <h1 class="b">i am saiii</h1>
+    <h1 class="c">i am krishna</h1>
+    <script>
+        let x=document.getElementsByClassName('a')
+        document.write(x)
+    </script>
+-->
+
+<!--  
+<h1 class="a">i am sri</h1>
+<h1 class="b">i am saiii</h1>
+<h1 class="c">i am krishna</h1>
+<script>
+    let x=document.getElementsByClassName('a')
+    document.write(x)
+   for(let i=0;i<x.length;i++){
+    document.write(x[i])
+   }
+ </script>
+-->
+    <!--  
+<h3 class="a">i am sri</h1>
+    <h2 class="b">i am saiii</h1>
+    <h1 class="c">i am krishna</h1>
+    <script>
+        let x=document.getElementsByTagName('h1')
+        document.write(x)
+        for(let i=0;i<x.length;i++){
+            document.write(x[i])
+        }
+             </script>
+    -->
+<!--  
+        <h1 class="c">i am king</h1>
+        <h3 class="a">i am sri</h1>
+        <h2 class="b">i am saiii</h1>
+        <h1 class="c">i am krishna</h1>
+        <script>
+            let x=document.querySelector('h1')
+            document.write(x)
+            for(let i=0;i<x.length;i++){
+                document.write(x[i])
+            }
+    </script>
+-->
+<!--
+<h1 class="c">i am king</h1>
+<h3 class="a">i am sri</h1>
+<h2 class="b">i am saiii</h1>
+<h1 class="c">i am krishna</h1>
+<script>
+    let x=document.querySelectorAll('h1')
+    document.write(x)
+    for(let i=0;i<x.length;i++){
+        document.write(x[i])
+    }
+</script>
+-->
+<!-- <script>
+    let t=document.createElement('h2')
+    t.className="tt"
+    t.textContent="i m in hyd"
+    document.body.appendChild(t); -->
+<script>
+    const tt=["hari","kavya","anuu"]
+    for(let i=0;i<t.length;i++){
+        let tt=document.createElement('h2')
+        tt.className="aA"
+        tt.textContent=t[i];
+        document.body.appendChild(tt)
+        document.write(tt)
+    }</script>
+  
+</body>
+</html>
