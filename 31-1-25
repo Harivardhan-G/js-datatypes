@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <div is="a">
+        <h1>ravi</h1>
+        <h1 id="r">ram</h1>
+    </div>
+    <div id="b">
+        <h2>sam</h2>
+        <h2>venkat</h2>
+    </div>
+    <script>
+        let n=document.createElement('h1')
+        n.textContent="chiru"
+        let p=document.getElementById('a')
+        let l=document.getElementById('r')
+        p.insertBefore(n,l)
+        let nn=document.createElement('h2')
+        nn.textContent="ganesh"
+        let pp=doc.getElementById("a")
+        let ll=document.getElementById("rr")
+        pp.insertBefore(nn,ll)
+    </script>
+    <div id="a">
+        <h1 id="d">mani</h1>
+        <h1 >hari</h1>
+    </div>
+    <div id="b">
+        <h2>ram</h2>
+        <h2>sai</h2>
+    </div>
+    <script>
+        let n= document.createElement('hi')
+        n.textContent= "Malla Reddy University"
+            let q= document.getElementById('a')
+           q.replaceChildren(n)
+    </script>
+
+</body>
+</html>
