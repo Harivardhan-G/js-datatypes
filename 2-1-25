@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+<script>
+     /*let n=parseInt(prompt("enter a age: "))
+    let m=confirm(" are you a citizen")
+ 
+    if (n>=18 && m){
+        document.write("eligible to vote")
+    }else{
+        document.write("not eligible to vote")  
+    } */
+
+
+    /*
+    let age = parseInt(prompt("Enter your age:"))    
+    if(age>=18 ){
+        let citizen = confirm("Are you a citizen?")
+    let passedCitizenTest = confirm("Have you passed citizen test?")
+        document.write("You are eligible to vote")
+        
+        if(age>=18 && !citizen && passedCitizenTest){
+            document.write("You are eligible to vote")
+        }
+        
+    }else{
+        document.write("You are not eligible to vote")
+    }*/
+
+
+    function calculateDiscount(amount, isPremiumMember) {
+        let discount = 0;
+    
+        if (amount > 50 && amount <= 100) {
+            discount = amount * 0.10; 
+        }
+        
+        
+        if (amount >= 100) {
+            discount = amount * 0.20;
+         
+            if (isPremiumMember) {
+                discount += amount * 0.05; 
+            }
+        }
+    
+        let total = amount - discount; 
+        return total;
+    }
+    
+    
+    function getUserInput() {
+        const amountSpent = parseFloat(prompt("Enter the amount spent:")); 
+        const isPremiumMember = confirm("Are you a premium member? Click OK for Yes or Cancel for No."); 
+    
+        const finalAmount = calculateDiscount(amountSpent, isPremiumMember);
+        alert("Final amount after discount: $" + finalAmount.toFixed(2)); 
+    }
+    
+    
+    getUserInput();
+    
+</script>
+</body>
+</html>
