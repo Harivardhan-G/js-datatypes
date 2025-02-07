@@ -1,0 +1,70 @@
+Components:
+Conditional rendering:
+App.js:
+import react from 'react';
+import Greeting from './greeting';
+function App(){
+  const isLoggedIn= true;
+  return (
+    <div className='App'>
+      <Greeting isLoggedIn={isLoggedIn}/>
+    </div>
+  )
+}
+export default App;
+
+greeting.js:
+import React from 'react';
+function Greeting({isLoggedIn}){
+    if(isLoggedIn){
+        return <h1>welcome back!</h1>
+
+    }else{
+        return <h1>please login</h1>
+    }
+}
+export default Greeting;
+
+lists and keys:
+in react , list is a collection of items you  want to show on the screen .
+keys In react helps an item to track all the items 
+map():
+elements in array
+function will be applied to all items 
+map()  in react for list
+fruitlist.js
+import React from "react";
+import './App.css'
+const FruitList=()=>{
+  const fruits=["apple","banana","cherry"];
+  return(
+    <div className="message">
+      <h1>Fruits List</h1>
+      <ul>
+        {fruits.map((fruit,index)=>(
+        <li key={index}>{fruit}</li>
+        ))}
+      </ul>
+    </div>
+  )
+}
+export default FruitList;
+
+App.js
+import React from "react";
+const TodoList=()=>{
+  const todos=[
+    {id:1,text:"Drink Green Tea"},
+    {id:2,text:"Listening songs"},
+    {id:3,text:"playing games"}
+  ];
+  return(
+    <ul>
+      {todos.map(todo=>(
+        <li key={todo.id}>{todo.text}</li>
+      ))}
+    </ul>
+  )
+}
+export default TodoList;
+
