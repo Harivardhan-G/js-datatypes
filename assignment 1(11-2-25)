@@ -1,0 +1,119 @@
+///app.js
+import React from "react";
+import ProfileCard from "./ProfileCard";
+import './App.css';
+
+const App = () => {
+  return (
+    <div>
+      <h1>User Profiles</h1>
+      <div className="profile-container">
+        <ProfileCard
+          name="hari"
+          greeting="Hello! I love coding."
+          imageSrc="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQWHxTvJzZxj8W_gLQpvVhjj40sRqfSg2hDMLZ5CvDXRC1pbEnn4IxPTbE3kSRCKJSFQq0&usqp=CAU"
+        />
+        <ProfileCard
+          name="john"
+          greeting="Hey there! I enjoy photography."
+          imageSrc="https://media.istockphoto.com/id/1437816897/photo/business-woman-manager-or-human-resources-portrait-for-career-success-company-we-are-hiring.jpg?s=612x612&w=0&k=20&c=tyLvtzutRh22j9GqSGI33Z4HpIwv9vL_MZw_xOE19NQ="
+        />
+        <ProfileCard
+          name="jane"
+          greeting="Hi! I’m a travel enthusiast."
+          imageSrc="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcShYwM33sSN7MtnLIq0k1qjhpoEtSstLE26gA&s"
+        />
+      </div>
+    </div>
+  );
+};
+
+export default App;
+
+
+
+///
+
+// ProfileCard.js
+import React from 'react';
+
+const ProfileCard = ({ name, greeting, imageSrc }) => {
+  return (
+    <div className="profile-card">
+      <img src={imageSrc} alt={`${name}'s profile`} />
+      <h2>{name}</h2>
+      <p>{greeting}</p>
+    </div>
+  );
+};
+
+export default ProfileCard;
+///
+/* General app styles */
+h1 {
+  text-align: center;
+  margin-bottom: 20px;
+  font-size: 2rem;
+  color: #333;
+}
+
+/* Container for profile cards */
+.profile-container {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr)); /* Responsive grid with minimum width for each card */
+  gap: 20px;
+  padding: 20px;
+  max-width: 1000px;
+  margin: 0 auto; /* Center the grid */
+}
+
+/* Profile card styles */
+.profile-card {
+  background-color: #fff;
+  border-radius: 12px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  overflow: hidden;
+  text-align: center;
+  padding: 20px;
+  transition: transform 0.3s ease;
+}
+
+/* Hover effect for the card */
+.profile-card:hover {
+  transform: translateY(-5px);
+}
+
+/* Profile image styling */
+.profile-card img {
+  width: 120px;      /* Fixed width */
+  height: 120px;     /* Fixed height */
+  border-radius: 50%;
+  object-fit: cover; /* Ensures the image fits and is cropped in a circle */
+  margin-bottom: 15px;
+  border: 2px solid #ddd; /* Optional: add border for better look */
+}
+
+/* Name styling */
+.profile-card h2 {
+  font-size: 1.5rem;
+  margin: 10px 0;
+  color: #333;
+}
+
+/* Greeting message styling */
+.profile-card p {
+  font-size: 1rem;
+  color: #666;
+}
+
+/* Responsive design for smaller screens */
+@media (max-width: 600px) {
+  .profile-card {
+    padding: 15px;
+  }
+
+  .profile-card img {
+    width: 100px;
+    height: 100px;
+  }
+}
