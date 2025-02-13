@@ -1,0 +1,53 @@
+import React from "react";
+
+const App = () => {
+  const user = { name: "hari", email: "hari@example.com" };
+
+  return <Parent user={user} />;
+};
+
+const Parent = ({ user }) => {
+  return <Child user={user} />;
+};
+
+const Child = ({ user }) => {
+  return <Profile user={user} />;
+};
+
+const Profile = ({ user }) => {
+  return (
+    <div>
+      <h2>Profile</h2>
+      <p>Name: {user.name}</p>
+      <p>Email: {user.email}</p>
+    </div>
+  );
+};
+
+export default App;
+// import React,{createContext ,useContext} from 'react'
+// const DataContext=createContext();
+
+// function App(){
+//     const data ="i am hari"
+//     return(
+//         <DataContext.Provider value={data}>
+//             <User1/> 
+
+//         </DataContext.Provider>
+//     )
+// }
+// function User1(){
+//     return <User2 />
+// }
+// function User2(){
+//     return <User3 />
+// }
+// function User3(){
+//     return <User4 />
+// }
+// function User4(){
+//     const data=useContext(DataContext)
+//     return <div> {data}</div>
+// }
+// export default App; 
