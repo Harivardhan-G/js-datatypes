@@ -1,0 +1,127 @@
+ListContext.js
+import React, { createContext, useReducer } from 'react';
+
+// Initial state
+const initialState = {
+  items: []
+};
+
+// Reducer function to handle actions
+const listReducer = (state, action) => {
+  switch (action.type) {
+    case 'ADD_ITEM':
+      return {
+        ...state,
+        items: [...state.items, { id: Date.now(), name: action.payload }]
+      };
+    case 'REMOVE_ITEM':
+      return {
+        ...state,
+        items: state.items.filter(item => item.id !== action.payload)
+      };
+    default:
+      return state;
+  }
+};
+
+// Create context
+export const ListContext = createContext();
+
+// Provider component
+export const ListProvider = ({ children }) => {
+  const [state, dispatch] = useReducer(listReducer, initialState);
+
+  return (
+    <ListContext.Provider value={{ state, dispatch }}>
+      {children}
+    </ListContext.Provider>
+  );
+};
+
+
+AddItem.js
+import React, { useState, useContext } from 'react';
+import { ListContext } from './ListContext';
+
+const AddItem = () => {
+  const [inputValue, setInputValue] = useState('');
+  const { dispatch } = useContext(ListContext);
+
+  const handleAddItem = () => {
+    if (inputValue.trim()) {
+      dispatch({ type: 'ADD_ITEM', payload: inputValue });
+      setInputValue('');  // Clear input field after adding
+    }
+  };
+
+  return (
+    <div>
+      <input 
+        type="text" 
+        value={inputValue} 
+        onChange={(e) => setInputValue(e.target.value)} 
+        placeholder="Add new item"
+      />
+      <button onClick={handleAddItem}>Add Item</button>
+    </div>
+  );
+};
+
+export default AddItem;
+
+
+ItemList.js
+import React, { useContext, useMemo } from 'react';
+import { ListContext } from './ListContext';
+
+const ItemList = () => {
+  const { state, dispatch } = useContext(ListContext);
+
+  // Use useMemo to optimize rendering
+  const itemList = useMemo(() => {
+    return state.items.map(item => (
+      <li key={item.id}>
+        {item.name} 
+        <button onClick={() => dispatch({ type: 'REMOVE_ITEM', payload: item.id })}>
+          Remove
+        </button>
+      </li>
+    ));
+  }, [state.items]);
+
+  return (
+    <div>
+      <ul>
+        {itemList}
+      </ul>
+      <p>Total items: {state.items.length}</p>
+    </div>
+  );
+};
+
+export default ItemList;
+
+
+App.js
+import React from 'react';
+import { ListProvider } from './ListContext';
+import AddItem from './AddItem';
+import ItemList from './ItemList';
+import './App.css';
+
+const App = () => {
+  return (
+    <ListProvider>
+      <div>
+        <h1>Item Management</h1>
+        <AddItem />
+        <ItemList />
+      </div>
+    </ListProvider>
+  );
+};
+
+export default App;
+
+
+
